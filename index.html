@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Sensor Website</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB5CJY79LC"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RB5CJY79LC');
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Food Tester</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html" style="color: white;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/AboutUs.html" style="color: white;">About our Project</a>
+          </li>
+          <!--     <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li> -->
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container" data-aos-container="true">
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/efe72148-2b30-4648-8d45-2da56ab504a6/webchat/config.js" defer></script>
+  
+    <div class="up">
+      <h1 class="canelafont">Food Sensor Application</h1>
+    </div>
+    <div class="down">
+      <div class="about">
+
+        <div class="instruments">
+          <div class="design-line"></div>
+          <b>INSTRUMENTS USED</b>
+          <div class="design-line"></div>
+        </div>
+        <div class="aboutsection1" data-aos="fade-right">
+          <a href="https://en.wikipedia.org/wiki/ESP32">
+            <img src="sensorImages/ESP32.jpg" class="rounded" alt="ESP32" loading="lazy" />
+          </a>
+          <div class="content-container">
+            <b>ESP32</b>
+            <div class="design-line"></div>
+            <p>
+              The ESP32 is a low-cost, low-power system on a chip (SoC) with
+              integrated Wi-Fi and dual-mode Bluetooth. It is developed by
+              Espressif Systems and is popular in IoT applications. Key
+              features include: Dual-core or single-core variations. Clock
+              speed: up to 240 MHz. Integrated 2.4 GHz Wi-Fi and Bluetooth.
+              Multiple GPIO pins with various functions (ADC, DAC, UART, SPI,
+              I2C, PWM). Sleep modes for power-saving. Built-in temperature
+              sensor and Hall sensor.
+            </p>
+          </div>
+        </div>
+        <div class="aboutsection2" data-aos="fade-left">
+          <a href="https://apureinstrument.com/blogs/about-ph-sensor/">
+            <img src="sensorImages/phSensor.jpg" alt="PH sensor" loading="lazy" class="rounded" />
+          </a>
+          <div class="content-container">
+            <b>pH SENSOR</b>
+            <div class="design-line"></div>
+            <p>
+              A pH sensor measures the hydrogen-ion activity in solutions,
+              indicating its acidity or alkalinity. Key points include:
+              Typically consists of a pH probe (glass electrode) and a
+              reference electrode. Outputs a voltage corresponding to the pH
+              level. Commonly used in water quality monitoring, aquariums, and
+              industrial processes. Requires calibration with standard buffer
+              solutions (pH 4, pH 7, pH 10).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="aboutsection1" data-aos="fade-right">
+          <a href="https://www.hnhcart.com/blogs/sensors-modules/tcs-3200-color-sensor">
+            <img src="sensorImages/TCS3200.jpg" class="rounded" alt="TCS3200 color sensor" loading="lazy" />
+          </a>
+          <div class="content-container">
+            <b>TCS3200 COLOR SENSOR</b>
+            <div class="design-line"></div>
+            <p>
+              The TCS3200 is a programmable color light-to-frequency
+              converter. It can detect and measure the intensity of red,
+              green, blue, and white light. Key features include: 8x8 array of
+              photodiodes (16 each for red, green, blue, and clear). Converts
+              light intensity to frequency output. Programmable color filters.
+              Commonly used in color detection applications and robotics.
+            </p>
+          </div>
+        </div>
+        <div class="aboutsection2 " data-aos="fade-left">
+          <a
+            href="https://atlas-scientific.com/blog/what-is-a-turbidity-sensor/#:~:text=Turbidity%20sensors%20are%20a%20piece,analytical%20sensor%20that%20measures%20turbidity.">
+            <img src="sensorImages/turbidity.jpg" alt="Turbidity sensor" loading="lazy" class="rounded" />
+          </a>
+          <div class="content-container">
+            <b>TURBIDITY SENSOR</b>
+            <div class="design-line"></div>
+            <p>
+              A turbidity sensor measures the cloudiness or haziness of a
+              fluid caused by particles. It is commonly used to assess water
+              quality. Key points include: Utilizes an optical method (light
+              source and detector). Measures the amount of light scattered by
+              suspended particles in the fluid. Outputs an analog voltage
+              corresponding to turbidity. Applications include water
+              treatment, environmental monitoring, and aquariums.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <div class="aboutsection1" data-aos="fade-right">
+          <a
+            href="https://www.rajguruelectronics.com/ProductView?tokDatRef=MTA5NQ==&tokenId=Mzk=&product=MQ3%20GAS%20SENSOR#:~:text=Gas%20Sensor(MQ3)%20module%20is,adjusted%20by%20using%20the%20potentiometer.">
+            <img src="sensorImages/Mq3.jpg" alt="Mq3 sensor" loading="lazy" class="rounded" />
+          </a>
+          <div class="content-container">
+            <b>MQ3 ALCOHOL GAS SENSOR</b>
+            <div class="design-line"></div>
+            <p>
+              The MQ3 is a semiconductor sensor for detecting alcohol. Key
+              features include: High sensitivity to alcohol and good
+              resistance to disturbances. Uses a tin dioxide (SnO2)
+              semiconductor layer. Outputs an analog signal corresponding to
+              the concentration of alcohol. Commonly used in breathalyzers and
+              alcohol detection systems.
+            </p>
+          </div>
+        </div>
+        <div class="aboutsection2 rounded" data-aos="fade-left">
+          <a href="https://www.elprocus.com/mq4-methane-gas-sensor/">
+            <img src="sensorImages/MQ4.jpg" alt="MQ4 sensor" loading="lazy" class="rounded" />
+          </a>
+          <div class="content-container">
+            <b>MQ4 METHANE GAS SENSOR</b>
+            <div class="design-line"></div>
+            <p>
+              The MQ4 is a semiconductor sensor for detecting methane (CH4).
+              Key points include: High sensitivity to methane and other
+              natural gases. Uses a tin dioxide (SnO2) semiconductor layer.
+              Outputs an analog signal corresponding to the concentration of
+              methane. Commonly used in gas leakage detection systems and
+              safety monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h1>APPLICATION PREVIEW</h1>
+      <table class="table table-dark" data-aos="fade-up">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Sensor Name</th>
+            <th scope="col">Sensor Value</th>
+          </tr>
+        </thead>
+        <tbody class="bg-dark">
+          <tr>
+            <th scope="row">1</th>
+            <td>PH sensor</td>
+            <td id="phsensor">Ph Sensor Value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Color Sensor</td>
+            <td id="colorsensor">color sensor value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Turbidity</td>
+            <td colspan="2" id="turbidity">Turbidity value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Methane</td>
+            <td colspan="2" id="methane">Methane value not found</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Alcohol</td>
+            <td colspan="2" id="alcohol">Alcohol value not found</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="item-list-container">
+        <div class="webcamsection CameraOff">
+          <button id="aibutton" class="btn">
+            Start
+          </button>
+          <div id="webcam-container"></div>
+          <div id="label-container"></div>
+        </div>
+        <div class="OutputBox">
+          <div class="gauge-container">
+            <div class="gauge" id="gauge1"></div>
+            <div class="gauge" id="gauge2"></div>
+            <div class="gauge" id="gauge3"></div>
+          </div>
+          <div class="food-stats">
+            <div class="left-stat">
+              <button class="item-button btn">
+                Water
+              </button>
+              <button class="item-button btn">
+                Vegetables
+              </button>
+              <button class="item-button btn">
+                Milk
+              </button>
+              <button class="item-button btn">
+                Fruits
+              </button>
+            </div>
+            <div class="right-stat">
+              <!-- Output will be displayed here -->
+              RESULT DISPLAY
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg width="0" height="0" version="1.1" class="gradient-mask" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradientGauge">
+        <stop class="color-red" offset="0%" />
+        <stop class="color-yellow" offset="17%" />
+        <stop class="color-green" offset="40%" />
+        <stop class="color-yellow" offset="87%" />
+        <stop class="color-red" offset="100%" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <!-- partial -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="https://cdn3.devexpress.com/jslib/17.1.6/js/dx.all.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/ListItemsScript.js"></script>
+  <script>
+    AOS.init({
+      offset: 120,
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+    });
+
+    document.querySelector(".container").addEventListener("scroll", () => {
+      AOS.refresh();
+    });
+  </script>
+  <script src="js/gauge.js"></script>
+  <script src="js/MLmodule.js"></script>
+
+</body>
+
+</html>

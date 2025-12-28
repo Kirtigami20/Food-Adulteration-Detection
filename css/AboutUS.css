@@ -1,0 +1,577 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #fff;
+    overflow: hidden;
+    background-image: url('images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #787777 rgba(0, 0, 0, 0.5);
+  }
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/CustomFont.woff2') format('woff2'),
+         url('fonts/RomanFont.woff') format('woff'),
+         url('fonts/CustomFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .up h2{
+    font-family:"CustomFont", sans-serif; 
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+  .down {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:   rgb(35 36 51);
+    color:rgb(0, 0, 0);
+    height: 445vh;
+  }
+  
+  .down > p {
+    margin-top: 0px;
+  }
+  .down h1{
+    color:white;
+    text-align: center;
+    margin: 10px;
+  }
+  .navbar {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(10px);
+  }
+  
+  .main-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .main-container::-webkit-scrollbar-thumb {
+    background: #232323;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+  }
+  
+  .main-container::-webkit-scrollbar-thumb:hover {
+    background: #252424;
+  }
+  
+  .main-container::-webkit-scrollbar-track {
+    background: #343333;
+    border-radius: 6px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  .main-container {
+    overflow-y: auto;
+    height: 100vh;
+    scrollbar-width: thin !important;
+  }
+  
+  .container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  
+  .frame {
+    background-color: rgb(47, 48, 67);
+    margin: 10px;
+    width: 270px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    position: relative;
+    overflow: hidden;
+    /* Ensure overflow is hidden for smooth transition */
+  }
+  
+  .frame:hover {
+    border: 2px solid black;
+  }
+  
+  .frame:hover .profile-pic {
+    transform: scale(1.005);
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+  }
+  
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .para-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 19px;
+  }
+  
+  .Kirti {
+    background-image: url(images/kirti2.jpg);
+    background-size: cover;
+  }
+  
+  .Sana {
+    background-image: url(images/sana.jpg);
+    background-size: cover;
+  }
+  
+  .Viya {
+    background-image: url(images/viya.jpg);
+    background-size: cover;
+  }
+  .Viren{
+    background-image:url(images/viren.png);
+    background-size:cover;
+  }
+  
+  
+  
+  
+  .group-frame {
+    width: 88%;
+    height: 560px;
+  }
+  
+  .group-pic {
+    width: 99%;
+    height: 500px;
+    border-radius: 12px;
+    background-color: #555;
+    background-image: url(images/group.jpg);
+    background-size: cover;
+    margin-bottom: 15px;
+  }
+  
+  .main-container::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    /* Color of the scroll thumb */
+    border-radius: 6px;
+    /* Rounded corners for the scroll thumb */
+    border: 3px solid #f1f1f1;
+    /* Border color of the scroll thumb to match the track background */
+  }
+  
+  .main-container::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+    /* Color when hovering over the scroll thumb */
+  }
+  
+  .main-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Background of the scrollbar track */
+    border-radius: 6px;
+    /* Rounded corners for the scroll track */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the track */
+  }
+  
+  .container-img {
+    padding: 2rem;
+  }
+  
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1140px; /* Limit max width for large screens */
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: flex;
+    aspect-ratio: 16 / 8.2; /* Adjust ratio as needed */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  
+  .slider img {
+    flex: 1 0 100%; /* Full width for each image */
+    scroll-snap-align: start;
+    object-fit: contain; /* Ensure the entire image is visible */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Adjust navigation styles if needed */
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+  
+  .slider-nav a:hover {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1.8px solid #cfcfcf;
+    height: 0;
+    font-size: 26px;
+    margin-top: 10px;
+    transition: height 0.5s ease;
+    overflow: hidden;
+  }
+  
+  .frame:hover .social-links {
+    height: 39px;
+  }
+  
+  .social-links>a {
+    flex: 1;
+    display: block;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+  }
+  
+  .social-links>a:not(:last-child) {
+    border-right: 1.8px solid #cfcfcf;
+  }
+  
+  .frame:hover .social-links>a {
+    opacity: 1;
+  }
+  
+  .social-links .instagram {
+    color: #ee5487;
+    border-radius: 7px;
+    transition: color 1s ease;
+  }
+  
+  .social-links .instagram:hover {
+    color: white;
+    background-color: #ee5487;
+  }
+  
+  .social-links .linkedin {
+    color: #0077b5;
+    border-radius: 7px;
+    transition: color 1s ease;
+  }
+  
+  .social-links .linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+  }
+  
+  .social-links .github {
+    color: #282C34;
+    border-radius: 7px;
+    transition: color 1s ease;
+  }
+  
+  .social-links .github:hover {
+    background-color: #282C34;
+    color: white;
+  }
+  
+  .blur {
+    filter: blur(5px);
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 60px;
+    color:white;
+  
+  }
+  .FullWidth{
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:20px;
+  }
+  
+  .left-section {
+    flex: 1;
+    margin-right: 10px;
+    color: white;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+  
+  }
+  
+  .middle-section {
+    flex: 2;
+    margin-right: 10px;
+    color: white;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .right-section {
+    display:flex;
+    flex:1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit-button {
+    background-color: #007BFF; /* Blue color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  .submit-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Custom focus ring */
+  }
+  
+  /* General Mobile Styles */
+  @media only screen and (max-width: 600px) {
+    body {
+      background-size: cover;
+      background-position: center;
+      color: #000; /* Adjust text color for better readability on mobile */
+    }
+  
+    .up {
+      height: 92vh;
+      padding: 20px;
+    }
+  
+    .down {
+      height: 1000vh;
+      padding: 20px;
+    }
+    form{
+      flex-direction: column;
+    }
+    .frame {
+      width: 90%;
+      font-size: 24px;
+      padding: 20px;
+    }
+  
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+    }
+    
+    h2 {
+      font-size: 24px;
+    }
+  
+    p {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 16px;
+    }
+  
+    .slider-wrapper {
+      width: 100%;
+    }
+  
+    .slider img {
+      aspect-ratio: 16 / 9;
+    }
+  
+    .slider-nav {
+      bottom: 0.75rem;
+    }
+  
+    .social-links {
+      height: auto;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+  
+  
+  
+  
+    .group-frame {
+      width: 100%;
+      height: auto;
+    }
+  
+    .group-pic {
+      width: 100%;
+      height: auto;
+    }
+  
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .container-img {
+      padding: 1rem;
+    }
+  }
+  
+  
+  .downloads {
+      padding: 20px;
+      background-color: rgb(35 36 51);
+      color:white;
+  }
+  
+  .downloads-item {
+      display: flex;
+      align-items: center;
+      background-color: rgb(47, 48, 67);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin: 10px 0;
+      color:white;
+  }
+  
+  .downloads-item img {
+      width: 80px; /* Adjust the size as needed */
+      height: auto;
+      margin-right: 15px;
+      border-radius: 4px;
+      object-fit: cover;
+  }
+  
+  .content-container {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .title {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+  }
+  
+  .design-line {
+    width:100%;
+    height:1px;
+    background-color: white;
+    margin-bottom:5px;
+  }
+  
+  .description {
+      font-size: 0.9em;
+      line-height: 1.4;
+      color: white;
+  }
+  
+  .btn-success {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      color: #fff;
+      background-color: #28a745;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin-left: 10px;
+  }
+  
+  .btn-success svg {
+      width: 16px; /* Adjust the icon size as needed */
+      height: 16px;
+      vertical-align: middle;
+  }
+  
+  .btn-success:hover {
+      background-color: #218838;
+  }
+  
